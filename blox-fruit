@@ -1768,8 +1768,10 @@ function invaid(a)
 end
 if _G.Key == "GRANT_HUB_KEY_HSDFGSHFJSF" then
 if game:GetService("RbxAnalyticsService"):GetClientId() == "01EC7A48-D384-4C0A-ADB1-082EA15A2188" then
+        wait(10)
 	start()
 elseif game:GetService("RbxAnalyticsService"):GetClientId() == "35B9B6C0-0454-40E7-BDFB-4241CA51DE8E" then
+        wait(10)
 	start()
 else
 	invaid("Invaid HWID")
