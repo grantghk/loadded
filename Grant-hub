@@ -1,5 +1,5 @@
 local hwidlist = loadstring(game:HttpGet("https://raw.githubusercontent.com/grantghk/script/main/HWID"))()
-local keyNDS = loadstring(game:HttpGet("https://raw.githubusercontent.com/grantghk/script/main/keyNDS"))()
+local keyNDS = loadstring(game:HttpGet("https://raw.githubusercontent.com/grantghk/loadded/main/keyNDS"))()
 local Key = _G.Key
 local suscessHWID = {}
 local suscesskey = {}
