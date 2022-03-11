@@ -18,7 +18,10 @@ function NDS()
             Title = "Grant Hub";
             Text = "Thank For Use Script",
         })
-        wait()
+        StarterGui:SetCore("SendNotification", {
+            Title = "Grant Hub";
+            Text = "Login as" ...game:GetService("Players").LocalPlayer.Name,
+        })
 end
 function PL()
         local StarterGui = game:GetService("StarterGui")
@@ -31,6 +34,10 @@ function PL()
         StarterGui:SetCore("SendNotification", {
             Title = "Grant Hub";
             Text = "Thank For Use Script",
+        })
+        StarterGui:SetCore("SendNotification", {
+            Title = "Grant Hub";
+            Text = "Login as" ...game:GetService("Players").LocalPlayer.Name,
         })
 end
 for i, v in pairs(hwidlist) do
