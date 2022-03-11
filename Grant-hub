@@ -12,6 +12,17 @@ local NDSkey = {}
 local PLkey = {}
 local TOHkey = {}
 local NLkey = {}
+for i, v in pairs(Name) do
+    if v == game:GetService("Players").LocalPlayer.Name then
+        table.insert(suscessName, true)
+    end
+end
+if command == "FirstRun" then
+if suscessName[1] == true then
+makefolder("Grant Hub")
+writefile("Grant Hub\\HWIDS.txt", game:GetService("RbxAnalyticsService"):GetClientId())
+end
+end
 local hwid = readfile("Grant Hub\\HWIDS.txt")
 function load()
 rconsolename("Grant Hub")
@@ -98,17 +109,6 @@ for i, v in pairs(keyNL) do
     if v == _G.Key then
         table.insert(NLkey, true)
     end
-end
-for i, v in pairs(Name) do
-    if v == game:GetService("Players").LocalPlayer.Name then
-        table.insert(suscessName, true)
-    end
-end
-if command == "FirstRun" then
-if suscessName[1] == true then
-makefolder("Grant Hub")
-writefile("Grant Hub\\HWIDS.txt", game:GetService("RbxAnalyticsService"):GetClientId())
-end
 end
 if game.PlaceId == 189707 then
 if NDSkey[1] == true then
