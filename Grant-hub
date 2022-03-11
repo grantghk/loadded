@@ -19,15 +19,6 @@ function NDS()
             Text = "Thank For Use Script",
         })
         wait()
-        StarterGui:SetCore("SendNotification", {
-            Title = "Grant Hub";
-            Text = "Credit By:grant#5476",
-        })
-        wait()
-        StarterGui:SetCore("SendNotification", {
-            Title = "Grant Hub";
-            Text = "This Script Is In Beta",
-        })
 end
 function PL()
         local StarterGui = game:GetService("StarterGui")
@@ -40,16 +31,6 @@ function PL()
         StarterGui:SetCore("SendNotification", {
             Title = "Grant Hub";
             Text = "Thank For Use Script",
-        })
-        wait()
-        StarterGui:SetCore("SendNotification", {
-            Title = "Grant Hub";
-            Text = "Credit By:grant#5476",
-        })
-        wait()
-        StarterGui:SetCore("SendNotification", {
-            Title = "Grant Hub";
-            Text = "This Script Is In Beta",
         })
 end
 for i, v in pairs(hwidlist) do
@@ -82,12 +63,14 @@ end
 end
 end
 if Key == "AdminG" then
-if command == "test" then
+if command == "Admin" then
+if game:GetService("Players").LocalPlayer.Name == "GRANTGHK" then
 if game.PlaceId == 155615604 then
     PL()
 end
 if game.PlaceId == 189707 then
     NDS()
+end
 end
 end
 end
