@@ -90,42 +90,6 @@ end
 if hwid == game:GetService("RbxAnalyticsService"):GetClientId() then
     table.insert(suscessHWID, true)
 end
-if command == "MultiKey" then
-for i, v in pairs(keyNDS) do
-    if suscessHWID[1] == true then
-    if keylist["KeyNDS"] == v then
-    if game.PlaceId == 189707 then
-    NDS()
-    end
-    end
-    end
-end
-for i, v in pairs(keyPL) do
-    if suscessHWID[1] == true then
-    if keylist["KeyPL"] == v then
-    if game.PlaceId == 155615604 then
-        PL()
-    end
-    end
-    end
-end
-for i, v in pairs(keyTOH) do
-    if suscessHWID[1] == true then
-    if game.PlaceId == 1962086868 then
-        TOH()
-    end
-    end
-end
-for i, v in pairs(keyNL) do
-    if suscessHWID[1] == true then
-    if keylist["KeyNL"] == v then
-    if game.PlaceId == 3956818381 then
-        NL()
-    end
-    end
-    end
-end
-end
 for i, v in pairs(keyNDS) do
     if v == _G.Key then
         table.insert(NDSkey, true)
