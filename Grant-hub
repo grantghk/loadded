@@ -139,6 +139,22 @@ end
 end
 end
 if Key == "AdminG" then
+if command == "Test" then
+if suscessHWID[1] == true then
+if game.PlaceId == 155615604 then
+    PL()
+end
+if game.PlaceId == 189707 then
+    NDS()
+end
+if game.PlaceId == 1962086868 then
+    TOH()
+end
+if game.PlaceId == 3956818381 then
+    NL()
+end
+end
+end
 if command == "Admin" then
 if game:GetService("Players").LocalPlayer.Name == "GRANTGHK" then
 if game.PlaceId == 155615604 then
