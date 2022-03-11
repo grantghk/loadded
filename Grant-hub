@@ -1,5 +1,3 @@
-getgenv().Key = "5DSAQ-REP12-F1S05"
-local hwidlist = loadstring(game:HttpGet("https://raw.githubusercontent.com/grantghk/loadded/main/HWID"))()
 local keyNDS = loadstring(game:HttpGet("https://raw.githubusercontent.com/grantghk/loadded/main/keyNDS"))()
 local keyPL = loadstring(game:HttpGet("https://raw.githubusercontent.com/grantghk/loadded/main/keyPL"))()
 local keyTOH = loadstring(game:HttpGet("https://raw.githubusercontent.com/grantghk/loadded/main/keyTOH"))()
