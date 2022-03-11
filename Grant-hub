@@ -10,7 +10,7 @@ local NDSkey = {}
 local PLkey = {}
 local TOHkey = {}
 local NLkey = {}
-local hwid = readfile("Grant Hub\\HWID.txt")
+local hwid = readfile("Grant Hub\\HWIDS.txt")
 function load()
 rconsolename("Grant Hub")
 rconsoleprint("Thank For Buying Grant Hub")
