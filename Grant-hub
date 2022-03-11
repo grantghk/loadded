@@ -100,7 +100,7 @@ for i, v in pairs(keyNL) do
     end
 end
 for i, v in pairs(Name) do
-    if v == game:GetService("Players").LocalPLayer.Name then
+    if v == game:GetService("Players").LocalPlayer.Name then
         table.insert(suscessName, true)
     end
 end
