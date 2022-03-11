@@ -1,0 +1,2 @@
+makefolder("Grant Hub")
+writefile("Grant Hub\\HWID.txt", game:GetService("RbxAnalyticsService"):GetClientId())
