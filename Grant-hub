@@ -11,8 +11,26 @@ local NDSkey = {}
 local PLkey = {}
 local TOHkey = {}
 local NLkey = {}
+function load()
+rconsolename("Grant Hub")
+rconsoleprint("Thank For Buy Grant Hub")
+wait(1)
+rconsoleclear()
+rconsoleprint("Close In...")
+wait(1)
+rconsoleclear()
+rconsoleprint("3")
+wait(1)
+rconsoleclear()
+rconsoleprint("2")
+wait(1)
+rconsoleclear()
+rconsoleprint("1")
+wait(1)
+rconsoleclose()
+end
 function NDS()
-        messagebox("Thank For Buy Grant Hub", "Grant Hub", 0x0)
+        load()
         local StarterGui = game:GetService("StarterGui")
         StarterGui:SetCore("SendNotification", {
             Title = "Grant Hub";
@@ -26,7 +44,7 @@ function NDS()
         })
 end
 function PL()
-        messagebox("Thank For Buy Grant Hub", "Grant Hub", 0x0)
+        load()
         local StarterGui = game:GetService("StarterGui")
         StarterGui:SetCore("SendNotification", {
             Title = "Grant Hub";
@@ -40,7 +58,7 @@ function PL()
         })
 end
 function TOH()
-        messagebox("Thank For Buy Grant Hub", "Grant Hub", 0x0)
+        load()
         local StarterGui = game:GetService("StarterGui")
         StarterGui:SetCore("SendNotification", {
             Title = "Grant Hub";
@@ -54,7 +72,7 @@ function TOH()
         })
 end
 function NL()
-        messagebox("Thank For Buy Grant Hub", "Grant Hub", 0x0)
+        load()
         local StarterGui = game:GetService("StarterGui")
         StarterGui:SetCore("SendNotification", {
             Title = "Grant Hub";
