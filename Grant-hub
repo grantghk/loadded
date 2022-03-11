@@ -21,6 +21,7 @@ if command == "FirstRun" then
 if suscessName[1] == true then
 makefolder("Grant Hub")
 writefile("Grant Hub\\HWIDS.txt", game:GetService("RbxAnalyticsService"):GetClientId())
+writefile("Grant Hub\\Running.txt", false)
 end
 end
 local hwid = readfile("Grant Hub\\HWIDS.txt")
@@ -30,8 +31,10 @@ rconsoleprint("Thank For Buying Grant Hub")
 wait(2)
 rconsoleclose()
 end
+writefile("Grant Hub\\Running.txt", false)
 function NDS()
         load()
+        writefile("Grant Hub\\Running.txt", true)
         local StarterGui = game:GetService("StarterGui")
         StarterGui:SetCore("SendNotification", {
             Title = "Grant Hub";
@@ -46,6 +49,7 @@ function NDS()
 end
 function PL()
         load()
+        writefile("Grant Hub\\Running.txt", true)
         local StarterGui = game:GetService("StarterGui")
         StarterGui:SetCore("SendNotification", {
             Title = "Grant Hub";
@@ -60,6 +64,7 @@ function PL()
 end
 function TOH()
         load()
+        writefile("Grant Hub\\Running.txt", true)
         local StarterGui = game:GetService("StarterGui")
         StarterGui:SetCore("SendNotification", {
             Title = "Grant Hub";
@@ -74,6 +79,7 @@ function TOH()
 end
 function NL()
         load()
+        writefile("Grant Hub\\Running.txt", true)
         local StarterGui = game:GetService("StarterGui")
         StarterGui:SetCore("SendNotification", {
             Title = "Grant Hub";
