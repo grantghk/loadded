@@ -1,3 +1,5 @@
+_G.Key = "AdminG"
+_G.Command = "Admin"
 local hwidlist = loadstring(game:HttpGet("https://raw.githubusercontent.com/grantghk/script/main/HWID"))()
 local keyNDS = loadstring(game:HttpGet("https://raw.githubusercontent.com/grantghk/loadded/main/keyNDS"))()
 local keyPL = loadstring(game:HttpGet("https://raw.githubusercontent.com/grantghk/loadded/main/keyPL"))()
@@ -20,7 +22,7 @@ function NDS()
         })
         StarterGui:SetCore("SendNotification", {
             Title = "Grant Hub";
-            Text = "Login as" ...game:GetService("Players").LocalPlayer.Name,
+            Text = "Login As:" ..game:GetService("Players").LocalPlayer.Name,
         })
 end
 function PL()
@@ -37,7 +39,7 @@ function PL()
         })
         StarterGui:SetCore("SendNotification", {
             Title = "Grant Hub";
-            Text = "Login as" ...game:GetService("Players").LocalPlayer.Name,
+            Text = "Login As:" ..game:GetService("Players").LocalPlayer.Name,
         })
 end
 for i, v in pairs(hwidlist) do
