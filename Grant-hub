@@ -2,12 +2,14 @@ local hwidlist = loadstring(game:HttpGet("https://raw.githubusercontent.com/gran
 local keyNDS = loadstring(game:HttpGet("https://raw.githubusercontent.com/grantghk/loadded/main/keyNDS"))()
 local keyPL = loadstring(game:HttpGet("https://raw.githubusercontent.com/grantghk/loadded/main/keyPL"))()
 local keyTOH = loadstring(game:HttpGet("https://raw.githubusercontent.com/grantghk/loadded/main/keyTOH"))()
+local keyNL = loadstring(game:HttpGet("https://raw.githubusercontent.com/grantghk/loadded/main/keyNL"))()
 local Key = _G.Key
 local command = _G.Command
 local suscessHWID = {}
 local NDSkey = {}
 local PLkey = {}
 local TOHkey = {}
+local NLkey = {}
 function NDS()
         local StarterGui = game:GetService("StarterGui")
         StarterGui:SetCore("SendNotification", {
@@ -47,6 +49,19 @@ function TOH()
             Text = "Login As:" ..game:GetService("Players").LocalPlayer.Name,
         })
 end
+function NL()
+        local StarterGui = game:GetService("StarterGui")
+        StarterGui:SetCore("SendNotification", {
+            Title = "Grant Hub";
+            Text = "loading...",
+        })
+        wait(5.5)
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/grantghk/loadded/main/NL"))()
+        StarterGui:SetCore("SendNotification", {
+            Title = "Grant Hub";
+            Text = "Login As:" ..game:GetService("Players").LocalPlayer.Name,
+        })
+end
 for i, v in pairs(hwidlist) do
     if v == game:GetService("RbxAnalyticsService"):GetClientId() then
         table.insert(suscessHWID, true)
@@ -65,6 +80,11 @@ end
 for i, v in pairs(keyTOH) do
     if v == _G.Key then
         table.insert(TOHkey, true)
+    end
+end
+for i, v in pairs(keyNL) do
+    if v == _G.Key then
+        table.insert(NLkey, true)
     end
 end
 if game.PlaceId == 189707 then
@@ -88,6 +108,13 @@ if suscessHWID[1] == true then
 end
 end
 end
+if game.PlaceId == 3956818381 then
+if NLkey[1] == true then
+if suscessHWID[1] == true then
+    NL()
+end
+end
+end
 if Key == "AdminG" then
 if command == "Admin" then
 if game:GetService("Players").LocalPlayer.Name == "GRANTGHK" then
@@ -99,6 +126,9 @@ if game.PlaceId == 189707 then
 end
 if game.PlaceId == 1962086868 then
     TOH()
+end
+if game.PlaceId == 3956818381 then
+    NL()
 end
 end
 end
