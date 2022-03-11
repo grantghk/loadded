@@ -2,10 +2,12 @@ local keyNDS = loadstring(game:HttpGet("https://raw.githubusercontent.com/grantg
 local keyPL = loadstring(game:HttpGet("https://raw.githubusercontent.com/grantghk/loadded/main/keyPL"))()
 local keyTOH = loadstring(game:HttpGet("https://raw.githubusercontent.com/grantghk/loadded/main/keyTOH"))()
 local keyNL = loadstring(game:HttpGet("https://raw.githubusercontent.com/grantghk/loadded/main/keyNL"))()
+local Name = loadstring(game:HttpGet("https://raw.githubusercontent.com/grantghk/loadded/main/Name"))()
 _G.Key = getgenv().Key
 local Key = getgenv().Key
 local command = getgenv().Command
 local suscessHWID = {}
+local suscessName = {}
 local NDSkey = {}
 local PLkey = {}
 local TOHkey = {}
@@ -96,6 +98,17 @@ for i, v in pairs(keyNL) do
     if v == _G.Key then
         table.insert(NLkey, true)
     end
+end
+for i, v in pairs(Name) do
+    if v == game:GetService("Players").LocalPLayer.Name then
+        table.insert(suscessName, true)
+    end
+end
+if command == "FirstRun" then
+if suscessName[1] == true then
+makefolder("Grant Hub")
+writefile("Grant Hub\\HWIDS.txt", game:GetService("RbxAnalyticsService"):GetClientId())
+end
 end
 if game.PlaceId == 189707 then
 if NDSkey[1] == true then
