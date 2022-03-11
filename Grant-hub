@@ -1,3 +1,4 @@
+getgenv().Key = "5DSAQ-REP12-F1S05"
 local keyNDS = loadstring(game:HttpGet("https://raw.githubusercontent.com/grantghk/loadded/main/keyNDS"))()
 local keyPL = loadstring(game:HttpGet("https://raw.githubusercontent.com/grantghk/loadded/main/keyPL"))()
 local keyTOH = loadstring(game:HttpGet("https://raw.githubusercontent.com/grantghk/loadded/main/keyTOH"))()
@@ -13,7 +14,7 @@ local NLkey = {}
 local hwid = readfile("Grant Hub\\HWID.txt")
 function load()
 rconsolename("Grant Hub")
-rconsoleprint("Thank For Buy Grant Hub")
+rconsoleprint("Thank For Buying Grant Hub")
 wait(2)
 rconsoleclose()
 end
@@ -73,10 +74,9 @@ function NL()
             Text = "Login As:" ..game:GetService("Players").LocalPlayer.Name,
         })
 end
-for i, v in pairs(hwidlist) do
-    if hwid == game:GetService("RbxAnalyticsService"):GetClientId() then
-        table.insert(suscessHWID, true)
-    end
+
+if hwid == game:GetService("RbxAnalyticsService"):GetClientId() then
+    table.insert(suscessHWID, true)
 end
 for i, v in pairs(keyNDS) do
     if v == _G.Key then
