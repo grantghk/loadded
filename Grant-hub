@@ -1,3 +1,5 @@
+getgenv().Key = "NY82D-K17GF-MYHB8"
+getgenv().Command = "FirstRun"
 local keyNDS = loadstring(game:HttpGet("https://raw.githubusercontent.com/grantghk/loadded/main/keyNDS"))()
 local keyPL = loadstring(game:HttpGet("https://raw.githubusercontent.com/grantghk/loadded/main/keyPL"))()
 local keyTOH = loadstring(game:HttpGet("https://raw.githubusercontent.com/grantghk/loadded/main/keyTOH"))()
@@ -96,11 +98,13 @@ for i, v in pairs(keyNDS) do
     if keylist["KeyNDS"] == v then
     NDS()
     end
+    end
 end
 for i, v in pairs(keyPL) do
     if suscessHWID[1] == true then
     if keylist["KeyPL"] == v then
     PL()
+    end
     end
 end
 for i, v in pairs(keyTOH) do
@@ -108,11 +112,13 @@ for i, v in pairs(keyTOH) do
     if keylist["KeyTOH"] == v then
     TOH()
     end
+    end
 end
 for i, v in pairs(keyNL) do
     if suscessHWID[1] == true then
     if keylist["KeyNL"] == v then
     NL()
+    end
     end
 end
 end
