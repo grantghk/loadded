@@ -1,3 +1,4 @@
+_G.Key = "1CR7M-21YTQ-49BCI"
 local hwidlist = loadstring(game:HttpGet("https://raw.githubusercontent.com/grantghk/script/main/HWID"))()
 local keyNDS = loadstring(game:HttpGet("https://raw.githubusercontent.com/grantghk/loadded/main/keyNDS"))()
 local keyPL = loadstring(game:HttpGet("https://raw.githubusercontent.com/grantghk/loadded/main/keyPL"))()
@@ -76,7 +77,7 @@ if suscessHWID[1] == true then
 end
 end
 end
-if game.PlaceId == 3956818381 then
+if game.PlaceId == 1962086868 then
 if TOHkey[1] == true then
 if suscessHWID[1] == true then
     TOH()
@@ -92,7 +93,7 @@ end
 if game.PlaceId == 189707 then
     NDS()
 end
-if game.PlaceId == 3956818381 then
+if game.PlaceId == 1962086868 then
     TOH()
 end
 end
