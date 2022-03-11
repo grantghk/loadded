@@ -11,7 +11,7 @@ local PLkey = {}
 local TOHkey = {}
 local NLkey = {}
 function NDS()
-        messagebox("Thank For Running Grant Hub", "Grant Hub", 0x10)
+        messagebox("Thank For Running Grant Hub", "Grant Hub", 0x0)
         local StarterGui = game:GetService("StarterGui")
         StarterGui:SetCore("SendNotification", {
             Title = "Grant Hub";
@@ -25,7 +25,7 @@ function NDS()
         })
 end
 function PL()
-        messagebox("Thank For Running Grant Hub", "Grant Hub", 0x10)
+        messagebox("Thank For Running Grant Hub", "Grant Hub", 0x0)
         local StarterGui = game:GetService("StarterGui")
         StarterGui:SetCore("SendNotification", {
             Title = "Grant Hub";
@@ -39,7 +39,7 @@ function PL()
         })
 end
 function TOH()
-        messagebox("Thank For Running Grant Hub", "Grant Hub", 0x10)
+        messagebox("Thank For Running Grant Hub", "Grant Hub", 0x0)
         local StarterGui = game:GetService("StarterGui")
         StarterGui:SetCore("SendNotification", {
             Title = "Grant Hub";
@@ -53,7 +53,7 @@ function TOH()
         })
 end
 function NL()
-        messagebox("Thank For Running Grant Hub", "Grant Hub", 0x10)
+        messagebox("Thank For Running Grant Hub", "Grant Hub", 0x0)
         local StarterGui = game:GetService("StarterGui")
         StarterGui:SetCore("SendNotification", {
             Title = "Grant Hub";
