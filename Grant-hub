@@ -1,11 +1,13 @@
 local hwidlist = loadstring(game:HttpGet("https://raw.githubusercontent.com/grantghk/script/main/HWID"))()
 local keyNDS = loadstring(game:HttpGet("https://raw.githubusercontent.com/grantghk/loadded/main/keyNDS"))()
 local keyPL = loadstring(game:HttpGet("https://raw.githubusercontent.com/grantghk/loadded/main/keyPL"))()
+local keyTOH = loadstring(game:HttpGet("https://raw.githubusercontent.com/grantghk/loadded/main/keyTOH"))()
 local Key = _G.Key
 local command = _G.Command
 local suscessHWID = {}
 local NDSkey = {}
 local PLkey = {}
+local TOHkey = {}
 function NDS()
         local StarterGui = game:GetService("StarterGui")
         StarterGui:SetCore("SendNotification", {
@@ -27,6 +29,19 @@ function PL()
         })
         wait(5.5)
         loadstring(game:HttpGet("https://raw.githubusercontent.com/grantghk/loadded/main/PL"))()
+        StarterGui:SetCore("SendNotification", {
+            Title = "Grant Hub";
+            Text = "Login As:" ..game:GetService("Players").LocalPlayer.Name,
+        })
+end
+function TOH()
+        local StarterGui = game:GetService("StarterGui")
+        StarterGui:SetCore("SendNotification", {
+            Title = "Grant Hub";
+            Text = "loading...",
+        })
+        wait(5.5)
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/grantghk/loadded/main/TOH"))()
         StarterGui:SetCore("SendNotification", {
             Title = "Grant Hub";
             Text = "Login As:" ..game:GetService("Players").LocalPlayer.Name,
@@ -61,6 +76,13 @@ if suscessHWID[1] == true then
 end
 end
 end
+if game.PlaceId == 3956818381 then
+if TOHkey[1] == true then
+if suscessHWID[1] == true then
+    TOH()
+end
+end
+end
 if Key == "AdminG" then
 if command == "Admin" then
 if game:GetService("Players").LocalPlayer.Name == "GRANTGHK" then
@@ -69,6 +91,9 @@ if game.PlaceId == 155615604 then
 end
 if game.PlaceId == 189707 then
     NDS()
+end
+if game.PlaceId == 3956818381 then
+    TOH()
 end
 end
 end
