@@ -16,10 +16,6 @@ function NDS()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/grantghk/loadded/main/NDS"))()
         StarterGui:SetCore("SendNotification", {
             Title = "Grant Hub";
-            Text = "Thank For Use Script",
-        })
-        StarterGui:SetCore("SendNotification", {
-            Title = "Grant Hub";
             Text = "Login As:" ..game:GetService("Players").LocalPlayer.Name,
         })
 end
@@ -31,10 +27,6 @@ function PL()
         })
         wait(5.5)
         loadstring(game:HttpGet("https://raw.githubusercontent.com/grantghk/loadded/main/PL"))()
-        StarterGui:SetCore("SendNotification", {
-            Title = "Grant Hub";
-            Text = "Thank For Use Script",
-        })
         StarterGui:SetCore("SendNotification", {
             Title = "Grant Hub";
             Text = "Login As:" ..game:GetService("Players").LocalPlayer.Name,
