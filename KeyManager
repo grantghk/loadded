@@ -1,0 +1,12 @@
+if game.PlaceId == 155615604 then
+    _G.Key = Keylist[KeyPL]
+end
+if game.PlaceId == 189707 then
+    _G.Key = Keylist[KeyNDS]
+end
+if game.PlaceId == 1962086868 then
+    _G.Key = Keylist[KeyTOH]
+end
+if game.PlaceId == 3956818381 then
+    _G.Key = Keylist[KeyNL]
+end
