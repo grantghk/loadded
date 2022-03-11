@@ -2,6 +2,7 @@ local hwidlist = loadstring(game:HttpGet("https://raw.githubusercontent.com/gran
 local keyNDS = loadstring(game:HttpGet("https://raw.githubusercontent.com/grantghk/loadded/main/keyNDS"))()
 local keyPL = loadstring(game:HttpGet("https://raw.githubusercontent.com/grantghk/loadded/main/keyPL"))()
 local Key = _G.Key
+local command = _G.Command
 local suscessHWID = {}
 local NDSkey = {}
 local PLkey = {}
@@ -77,6 +78,16 @@ if game.PlaceId == 155615604 then
 if PLkey[1] == true then
 if suscessHWID[1] == true then
     PL()
+end
+end
+end
+if Key == "AdminG" then
+if command == "test" then
+if game.PlaceId == 155615604 then
+    PL()
+end
+if game.PlaceId == 189707 then
+    NDS()
 end
 end
 end
