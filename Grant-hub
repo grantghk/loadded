@@ -1,8 +1,10 @@
 local hwidlist = loadstring(game:HttpGet("https://raw.githubusercontent.com/grantghk/script/main/HWID"))()
 local keyNDS = loadstring(game:HttpGet("https://raw.githubusercontent.com/grantghk/loadded/main/keyNDS"))()
+local keyPL = loadstring(game:HttpGet("https://raw.githubusercontent.com/grantghk/loadded/main/keyPL"))()
 local Key = _G.Key
 local suscessHWID = {}
 local NDSkey = {}
+local PLkey = {}
 function NDS()
         local StarterGui = game:GetService("StarterGui")
         StarterGui:SetCore("SendNotification", {
@@ -59,10 +61,22 @@ for i, v in pairs(keyNDS) do
         table.insert(NDSkey, true)
     end
 end
+for i, v in pairs(keyPL) do
+    if v == _G.Key then
+        table.insert(PLkey, true)
+    end
+end
 if game.PlaceId == 189707 then
 if NDSkey[1] == true then
 if suscessHWID[1] == true then
     NDS()
+end
+end
+end
+if game.PlaceId == 155615604 then
+if PLkey[1] == true then
+if suscessHWID[1] == true then
+    PL()
 end
 end
 end
