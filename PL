@@ -1,0 +1,175 @@
+local DiscordLib = loadstring(game:HttpGet"https://raw.githubusercontent.com/dawid-scripts/UI-Libs/main/discord%20lib.txt")()
+local win = DiscordLib:Window("Grant Hub-Premium Edition")
+local serv = win:Server("Prison Life", "")
+local sldrs = serv:Channel("Player")
+local TP = serv:Channel("Teleport")
+local gun = serv:Channel("Gun")
+local sp = serv:Channel("Death Note")
+local Mics = serv:Channel("Mics")
+local credit = serv:Channel("Info")
+local text = "none"
+local location = "none"
+local sld = "none"
+local speed = 0
+local j = 0
+local se = 0
+local dbj = 0
+local dbs = 0
+local db = 0
+local db1 = 0
+local db2 = 0
+local db3 = 0
+local plrs = game:GetService("Players")
+local plrss = plrs.LocalPlayer
+local sldr = sldrs:Slider("change speed", 0, 500, 16, function(s)
+    dbs = s
+end)
+sldrs:Toggle("change",false, function(bool)
+    if bool == true then
+       game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = dbs
+    end
+    if bool == false then
+       game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
+       sldr:Change(16)
+    end
+end)
+local sldrd = sldrs:Slider("jumppower", 0, 500, 50, function(s)
+    dbj = s
+end)
+sldrs:Toggle("change",false, function(bool)
+    if bool == true then
+       game.Players.LocalPlayer.Character.Humanoid.JumpPower = dbj
+    end
+    if bool == false then
+       game.Players.LocalPlayer.Character.Humanoid.JumpPower = 50
+       sldrd:Change(50)
+    end
+end)
+credit:Label("Thank For Use Grant Hub")
+credit:Label("Script By:grant#5476")
+credit:Label("Ui libary By:dawid#7205")
+credit:Button("Check Your Key", function()
+    DiscordLib:Notification("Grant Hub", _G.Key, "OK")
+end)
+credit:Button("Check Your HWID", function()
+    DiscordLib:Notification("Grant Hub", game:GetService("RbxAnalyticsService"):GetClientId(), "OK")
+end)
+players = {}
+ 
+for i,v in pairs(game:GetService("Players"):GetChildren()) do
+   table.insert(players,v.Name)
+end
+local pls = sp:Dropdown("Player",players, function(bool)
+    plr = bool
+end)
+sp:Button("Refesh", function()
+table.clear(players)
+pls:Clear()
+for i,v in pairs(game:GetService("Players"):GetChildren()) do
+   table.insert(players,v.Name)
+   pls:Add(v.Name)
+end
+end)
+sp:Label("Function")
+sp:Button("Teleport", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players[plr].Character.HumanoidRootPart.CFrame
+end)
+sp:Button("Bring", function()
+     game.Players[plr].Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+end)
+sp:Button("Kill", function()
+     oi = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players[plr].Character.HumanoidRootPart.CFrame
+     wait()
+     game:GetService("Players")[plr].Character:Destroy()
+     game:GetService("Workspace")[plr]:Destroy()
+     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = oi
+     DiscordLib:Notification("Notification", "sucess", "Ok")
+end)
+local TPS = TP:Dropdown("Select Location",{"Prison", "Criminal Base", "Yard", "Police room"}, function(bool)
+    location = bool
+end)
+TP:Button("Teleport", function()
+    if location == "Prison" then
+           game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(889.247986, 99.9899826, 2399.29541, 0.350631028, -6.99158349e-08, 0.936513662, -5.10599847e-08, 1, 9.37723073e-08, -0.936513662, -8.06978591e-08, 0.350631028)
+    end
+    if location == "Criminal Base" then
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-919.324951, 94.1287613, 2061.93604, 0.527229309, -6.07733952e-08, -0.849723041, -3.86889667e-08, 1, -9.55268362e-08, 0.849723041, 8.32394562e-08, 0.527229309)
+    end
+    if location == "Yard" then
+
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(773.170654, 97.9999237, 2452.61011, -0.415602088, 7.13733499e-08, -0.909546554, -7.67476127e-09, 1, 8.19782144e-08, 0.909546554, 4.10508676e-08, -0.415602088)
+    end
+    if location == "Police room" then
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(834.177734, 99.9899826, 2312.87354, 0.852196693, -4.52569509e-07, 0.523221552, 1.94425661e-06, 1, -2.30173919e-06, -0.523221552, 2.97881138e-06, 0.852196693)
+    end
+end)
+Mics:Button("invisible", function()
+local X = game.Players.LocalPlayer.Character.HumanoidRootPart.Position.x
+local Y = game.Players.LocalPlayer.Character.HumanoidRootPart.Position.y
+local Z = game.Players.LocalPlayer.Character.HumanoidRootPart.Position.z
+x, y, z = X, Y, Z
+game.Players.LocalPlayer.Character.HumanoidRootPart.Position = Vector3.new(x, y-10000, z)
+DiscordLib:Notification("Grant Hub", "sucess", "Ok")
+end)
+Mics:Button("esp", function()
+while wait() do
+            pcall(function()
+              for i,v in pairs(game.Players:GetChildren()) do
+                   if not v.Character.Head:FindFirstChild("ESP") then
+                       local BillboardGui = Instance.new("BillboardGui")
+                       local TextLabel = Instance.new("TextLabel")
+                       BillboardGui.Parent = v.Character.Head
+                       BillboardGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+                       BillboardGui.Active = true
+                       BillboardGui.Name = "ESP"
+                       BillboardGui.AlwaysOnTop = true
+                       BillboardGui.LightInfluence = 1.000
+                       BillboardGui.Size = UDim2.new(0, 200, 0, 50)
+                       BillboardGui.StudsOffset = Vector3.new(0, 2.5, 0)
+                       TextLabel.Parent = BillboardGui
+                       TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+                       TextLabel.BackgroundTransparency = 1.000
+                       TextLabel.Size = UDim2.new(0, 200, 0, 50)
+                       TextLabel.Font = Enum.Font.GothamBold
+                       TextLabel.Text = v.Name
+                       TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+                       TextLabel.TextScaled = true
+                       TextLabel.TextSize = 6.000
+                       TextLabel.TextStrokeTransparency = 0.000
+                       TextLabel.TextWrapped = true
+                   end
+               end
+           end) 
+       end
+DiscordLib:Notification("Grant Hub", "sucess", "OK")
+end)
+local guns = gun:Dropdown("Select Gun", {"M9", "Remington 870", "AK-47"}, function(bool)
+    gunss = bool
+end)
+gun:Button("Get Gun", function()
+    local A_1 = game:GetService("Workspace")["Prison_ITEMS"].giver[gunss].ITEMPICKUP
+    local Event = game:GetService("Workspace").Remote.ItemHandler
+    Event:InvokeServer(A_1)
+    DiscordLib:Notification("Grant Hub", "Sucess", "OK")
+end)
+gun:Button("Boost Gun", function()
+    local module = nil
+    if game:GetService("Players").LocalPlayer.Backpack:FindFirstChild(gunss) then
+        module = require(game:GetService("Players").LocalPlayer.Backpack[gunss].GunStates)
+    elseif game:GetService("Players").LocalPlayer.Character:FindFirstChild(gunss) then
+        module = require(game:GetService("Players").LocalPlayer.Character[gunss].GunStates)
+    end
+    if module ~= nil then
+        module["MaxAmmo"] = math.huge
+        module["CurrentAmmo"] = math.huge
+        module["StoredAmmo"] = math.huge
+        module["FireRate"] = 0.000001
+        module["Spread"] = 0
+        module["Range"] = math.huge
+        module["Bullets"] = 10
+        module["ReloadTime"] = 0.000001
+        module["AutoFire"] = true
+    end
+    DiscordLib:Notification("Grant Hub", "Sucess", "OK")
+end)
