@@ -125,7 +125,7 @@ sldrs:Toggle("change",false, function(bool)
        sldrd:Change(50)
     end
 end)
-Main:Button("inf jump", function()
+Main:Button("Inf Jump", function()
     game:GetService("ReplicatedStorage").globalJumps.Value = 6969
     DiscordLib:Notification("Grant Hub", "sucess", "OK")
 end)
