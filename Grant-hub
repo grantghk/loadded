@@ -100,24 +100,32 @@ end
 if command == "AutoLoadKey" then
 if suscessHWID[1] == true then
 for i, v in pairs(keyNDS) do
-    if v == readfile("Grant Hub\\NDS_Key.txt") then
-        NDS()
-    end
+        if game.PlaceId == 189707 then
+            if v == readfile("Grant Hub\\NDS_Key.txt") then
+                NDS()
+            end
+        end
 end
 for i, v in pairs(keyPL) do
-    if v == readfile("Grant Hub\\PL_Key.txt") then
-        PL()
-    end
+        if game.PlaceId == 155615604 then
+            if v == readfile("Grant Hub\\PL_Key.txt") then
+                PL()
+            end
+        end
 end
 for i, v in pairs(keyTOH) do
-    if v == readfile("Grant Hub\\TOH_Key.txt") then
-        TOH()
-    end
+        if game.PlaceId == 1962086868 then
+            if v == readfile("Grant Hub\\TOH_Key.txt") then
+            TOH()
+            end
+        end
 end
 for i, v in pairs(keyNL) do
-    if v == readfile("Grant Hub\\NL_Key.txt") then
-        NL()
-    end
+        if game.PlaceId == 3956818381 then
+            if v == readfile("Grant Hub\\NL_Key.txt") then
+            NL()
+            end
+        end
 end
 end
 end
