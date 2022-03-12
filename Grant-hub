@@ -147,7 +147,7 @@ if suscessHWID[1] == true then
 if status == "false" then
     NDS()
     if command == "AutoSaveKey" then
-        writefile("Grant Hub\\NDS_Key", _G.Key)
+        writefile("Grant Hub\\NDS_Key.txt", _G.Key)
     end
 end
 end
@@ -159,7 +159,7 @@ if suscessHWID[1] == true then
 if status == "false" then
     PL()
     if command == "AutoSaveKey" then
-        writefile("Grant Hub\\PL_Key", _G.Key)
+        writefile("Grant Hub\\PL_Key.txt", _G.Key)
     end
 end
 end
@@ -171,7 +171,7 @@ if suscessHWID[1] == true then
 if status == "false" then
    TOH()
    if command == "AutoSaveKey" then
-        writefile("Grant Hub\\TOH_Key", _G.Key)
+        writefile("Grant Hub\\TOH_Key.txt", _G.Key)
     end
 end
 end
@@ -183,7 +183,7 @@ if suscessHWID[1] == true then
 if status == "false" then
    NL()
     if command == "AutoSaveKey" then
-        writefile("Grant Hub\\NL _Key", _G.Key)
+        writefile("Grant Hub\\NL_Key.txt", _G.Key)
     end
 end
 end
