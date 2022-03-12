@@ -24,14 +24,15 @@ writefile("Grant Hub\\HWIDS.txt", game:GetService("RbxAnalyticsService"):GetClie
 writefile("Grant Hub\\Running.txt", "false")
 end
 end
+writefile("Grant Hub\\Running.txt", "false")
 local hwid = readfile("Grant Hub\\HWIDS.txt")
+local status = readfile("Grant Hub\\Running.txt")
 function load()
 rconsolename("Grant Hub")
 rconsoleprint("Thank For Buying Grant Hub")
 wait(2)
 rconsoleclose()
 end
-writefile("Grant Hub\\Running.txt", "false")
 function NDS()
         load()
         writefile("Grant Hub\\Running.txt", "true")
@@ -119,28 +120,36 @@ end
 if game.PlaceId == 189707 then
 if NDSkey[1] == true then
 if suscessHWID[1] == true then
+if status == "false" then
     NDS()
+end
 end
 end
 end
 if game.PlaceId == 155615604 then
 if PLkey[1] == true then
 if suscessHWID[1] == true then
+if status == "false" then
     PL()
+end
 end
 end
 end
 if game.PlaceId == 1962086868 then
 if TOHkey[1] == true then
 if suscessHWID[1] == true then
-    TOH()
+if status == "false" then
+   TOH()
+end
 end
 end
 end
 if game.PlaceId == 3956818381 then
 if NLkey[1] == true then
 if suscessHWID[1] == true then
-    NL()
+if status == "false" then
+   NL()
+end
 end
 end
 end
