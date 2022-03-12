@@ -97,6 +97,30 @@ end
 if hwid == game:GetService("RbxAnalyticsService"):GetClientId() then
     table.insert(suscessHWID, true)
 end
+if command == "AutoLoadKey" then
+if suscessHWID[1] == true then
+for i, v in pairs(keyNDS) do
+    if v == readfile("Grant Hub\\NDS_Key.txt") then
+        NDS()
+    end
+end
+for i, v in pairs(keyPL) do
+    if v == readfile("Grant Hub\\PL_Key.txt") then
+        PL()
+    end
+end
+for i, v in pairs(keyTOH) do
+    if v == readfile("Grant Hub\\TOH_Key.txt") then
+        TOH()
+    end
+end
+for i, v in pairs(keyNL) do
+    if v == readfile("Grant Hub\\NL_Key.txt") then
+        NL
+    end
+end
+end
+end
 for i, v in pairs(keyNDS) do
     if v == _G.Key then
         table.insert(NDSkey, true)
@@ -122,6 +146,9 @@ if NDSkey[1] == true then
 if suscessHWID[1] == true then
 if status == "false" then
     NDS()
+    if command == "AutoSaveKey" then
+        writefile("Grant Hub\\NDS_Key", _G.Key)
+    end
 end
 end
 end
@@ -131,6 +158,9 @@ if PLkey[1] == true then
 if suscessHWID[1] == true then
 if status == "false" then
     PL()
+    if command == "AutoSaveKey" then
+        writefile("Grant Hub\\PL_Key", _G.Key)
+    end
 end
 end
 end
@@ -140,6 +170,9 @@ if TOHkey[1] == true then
 if suscessHWID[1] == true then
 if status == "false" then
    TOH()
+   if command == "AutoSaveKey" then
+        writefile("Grant Hub\\TOH_Key", _G.Key)
+    end
 end
 end
 end
@@ -149,6 +182,9 @@ if NLkey[1] == true then
 if suscessHWID[1] == true then
 if status == "false" then
    NL()
+    if command == "AutoSaveKey" then
+        writefile("Grant Hub\\NL _Key", _G.Key)
+    end
 end
 end
 end
