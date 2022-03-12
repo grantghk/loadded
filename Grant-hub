@@ -6,6 +6,9 @@ local Name = loadstring(game:HttpGet("https://raw.githubusercontent.com/grantghk
 _G.Key = getgenv().Key
 local Key = getgenv().Key
 local command = getgenv().Command
+local system = getgenv().System
+local keytype = getgenv().KeyType
+local newkey = getgenv().NewKey
 local suscessHWID = {}
 local suscessName = {}
 local NDSkey = {}
@@ -21,6 +24,9 @@ if command == "FirstRun" then
 if suscessName[1] == true then
 makefolder("Grant Hub")
 makefolder("Grant Hub\\Key")
+makefolder("Grant Hub\\System")
+makefolder("Grant Hub\\System\\backup")
+makefolder("Grant Hub\\System\\Key")
 writefile("Grant Hub\\HWIDS.txt", game:GetService("RbxAnalyticsService"):GetClientId())
 writefile("Grant Hub\\Running.txt", "false")
 end
@@ -228,6 +234,61 @@ if game.PlaceId == 1962086868 then
 end
 if game.PlaceId == 3956818381 then
     NL()
+end
+end
+end
+end
+if command == "SystemFile" then
+if system == "ManageKey" then
+if keytype == "NDS" then
+    writefile("Grant Hub\\Key\\NDS_Key.txt", newkey)
+end
+if keytype == "PL" then
+    writefile("Grant Hub\\Key\\PL_Key.txt", newkey)
+end
+if keytype == "TOH" then
+    writefile("Grant Hub\\Key\\TOH_Key.txt", newkey)
+end
+if keytype == "NL" then
+    writefile("Grant Hub\\Key\\NL_Key.txt", newkey)
+end
+end
+if system == "BackupKey" then
+if keytype == "NDS" then
+    writefile("Grant Hub\\System\\backup\\NDS_Key_BackUp.txt", readfile("Grant Hub\\Key\\NDS_Key.txt"))
+end
+if keytype == "PL" then
+    writefile("Grant Hub\\System\\backup\\NDS_Key_BackUp.txt", readfile("Grant Hub\\Key\\PL_Key.txt"))
+end
+if keytype == "TOH" then
+    writefile("Grant Hub\\System\\backup\\NDS_Key_BackUp.txt", readfile("Grant Hub\\Key\\TOH_Key.txt"))
+end
+if keytype == "NL" then
+    writefile("Grant Hub\\System\\backup\\NDS_Key_BackUp.txt", readfile("Grant Hub\\Key\\NL_Key.txt"))
+end
+end
+if game:GetService("Players").LocalPlayer.Name == "GRANTGHK" then
+if system == "genkey" then
+if keytype == "NDS" then
+for i, v in pairs(keyNDS) do
+    writefile("Grant Hub\\System\\Key\\NDS_Key.txt", v)
+end
+end
+if keytype == "PL" then
+for i, v in pairs(keyPL) do
+    writefile("Grant Hub\\System\\Key\\PL_Key.txt", v)
+end
+end
+if keytype == "TOH" then
+for i, v in pairs(keyTOH) do
+    writefile("Grant Hub\\System\\Key\\TOH_Key.txt", v)
+end
+end
+if keytype == "NL" then
+for i, v in pairs(keyNL) do
+    writefile("Grant Hub\\System\\Key\\NL_Key.txt", v)
+end
+end
 end
 end
 end
