@@ -116,7 +116,7 @@ for i, v in pairs(keyTOH) do
 end
 for i, v in pairs(keyNL) do
     if v == readfile("Grant Hub\\NL_Key.txt") then
-        NL
+        NL()
     end
 end
 end
