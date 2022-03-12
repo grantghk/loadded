@@ -20,6 +20,7 @@ end
 if command == "FirstRun" then
 if suscessName[1] == true then
 makefolder("Grant Hub")
+makefolder("Grant Hub\\Key")
 writefile("Grant Hub\\HWIDS.txt", game:GetService("RbxAnalyticsService"):GetClientId())
 writefile("Grant Hub\\Running.txt", "false")
 end
@@ -101,28 +102,28 @@ if command == "AutoLoadKey" then
 if suscessHWID[1] == true then
 for i, v in pairs(keyNDS) do
         if game.PlaceId == 189707 then
-            if v == readfile("Grant Hub\\NDS_Key.txt") then
+            if v == readfile("Grant Hub\\Key\\NDS_Key.txt") then
                 NDS()
             end
         end
 end
 for i, v in pairs(keyPL) do
         if game.PlaceId == 155615604 then
-            if v == readfile("Grant Hub\\PL_Key.txt") then
+            if v == readfile("Grant Hub\\Key\\PL_Key.txt") then
                 PL()
             end
         end
 end
 for i, v in pairs(keyTOH) do
         if game.PlaceId == 1962086868 then
-            if v == readfile("Grant Hub\\TOH_Key.txt") then
+            if v == readfile("Grant Hub\\Key\\TOH_Key.txt") then
             TOH()
             end
         end
 end
 for i, v in pairs(keyNL) do
         if game.PlaceId == 3956818381 then
-            if v == readfile("Grant Hub\\NL_Key.txt") then
+            if v == readfile("Grant Hub\\Key\\NL_Key.txt") then
             NL()
             end
         end
@@ -155,7 +156,7 @@ if suscessHWID[1] == true then
 if status == "false" then
     NDS()
     if command == "AutoSaveKey" then
-        writefile("Grant Hub\\NDS_Key.txt", _G.Key)
+        writefile("Grant Hub\\Key\\NDS_Key.txt", _G.Key)
     end
 end
 end
@@ -167,7 +168,7 @@ if suscessHWID[1] == true then
 if status == "false" then
     PL()
     if command == "AutoSaveKey" then
-        writefile("Grant Hub\\PL_Key.txt", _G.Key)
+        writefile("Grant Hub\\Key\\PL_Key.txt", _G.Key)
     end
 end
 end
@@ -179,7 +180,7 @@ if suscessHWID[1] == true then
 if status == "false" then
    TOH()
    if command == "AutoSaveKey" then
-        writefile("Grant Hub\\TOH_Key.txt", _G.Key)
+        writefile("Grant Hub\\Key\\TOH_Key.txt", _G.Key)
     end
 end
 end
@@ -191,7 +192,7 @@ if suscessHWID[1] == true then
 if status == "false" then
    NL()
     if command == "AutoSaveKey" then
-        writefile("Grant Hub\\NL_Key.txt", _G.Key)
+        writefile("Grant Hub\\Key\\NL_Key.txt", _G.Key)
     end
 end
 end
