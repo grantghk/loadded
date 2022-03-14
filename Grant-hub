@@ -25,7 +25,7 @@ if suscessName[1] == true then
 makefolder("Grant Hub")
 makefolder("Grant Hub\\Key")
 makefolder("Grant Hub\\System")
-makefolder("Grant Hub\\System\\backup")
+makefolder("Grant Hub\\System\\Backup")
 makefolder("Grant Hub\\System\\Key")
 writefile("Grant Hub\\HWIDS.txt", game:GetService("RbxAnalyticsService"):GetClientId())
 writefile("Grant Hub\\Running.txt", "false")
@@ -255,16 +255,16 @@ end
 end
 if system == "BackupKey" then
 if keytype == "NDS" then
-    writefile("Grant Hub\\System\\backup\\NDS_Key_BackUp.txt", readfile("Grant Hub\\Key\\NDS_Key.txt"))
+    writefile("Grant Hub\\System\\Backup\\NDS_Key_BackUp.txt", readfile("Grant Hub\\Key\\NDS_Key.txt"))
 end
 if keytype == "PL" then
-    writefile("Grant Hub\\System\\backup\\NDS_Key_BackUp.txt", readfile("Grant Hub\\Key\\PL_Key.txt"))
+    writefile("Grant Hub\\System\\Backup\\NDS_Key_BackUp.txt", readfile("Grant Hub\\Key\\PL_Key.txt"))
 end
 if keytype == "TOH" then
-    writefile("Grant Hub\\System\\backup\\NDS_Key_BackUp.txt", readfile("Grant Hub\\Key\\TOH_Key.txt"))
+    writefile("Grant Hub\\System\\Backup\\NDS_Key_BackUp.txt", readfile("Grant Hub\\Key\\TOH_Key.txt"))
 end
 if keytype == "NL" then
-    writefile("Grant Hub\\System\\backup\\NDS_Key_BackUp.txt", readfile("Grant Hub\\Key\\NL_Key.txt"))
+    writefile("Grant Hub\\System\\Backup\\NDS_Key_BackUp.txt", readfile("Grant Hub\\Key\\NL_Key.txt"))
 end
 end
 if game:GetService("Players").LocalPlayer.Name == "GRANTGHK" then
@@ -292,4 +292,6 @@ end
 end
 end
 end
-
+if command == "ResetHWID" then
+writefile("Grant Hub\\HWIDS.txt", game:GetService("RbxAnalyticsService"):GetClientId())
+end
