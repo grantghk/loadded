@@ -106,10 +106,11 @@ function NL()
         })
 end
 function Manager()
-rconsolename("Grant Hub")
-rconsoleprint("Thank For Buying Grant Hub V.2")
-wait(2)
-rconsoleclose()
+StarterGui:SetCore("SendNotification", {
+    Title = "Grant Hub";
+    Text = "loading...",
+})
+wait(5)
 local DiscordLib = loadstring(game:HttpGet"https://raw.githubusercontent.com/dawid-scripts/UI-Libs/main/discord%20lib.txt")()
 local win = DiscordLib:Window("Grant Hub-Premium Edition")
 local serv = win:Server("Script Manager", "")
@@ -347,7 +348,7 @@ writefile("Grant Hub\\HWIDS.txt", game:GetService("RbxAnalyticsService"):GetClie
 writefile("Grant Hub\\Running.txt", "false")
 end
 end
-if v2[1] == true do
+if v2[1] == true then
 if command == "Manual" then
     Manager()
 else
@@ -362,5 +363,6 @@ if game.PlaceId == 1962086868 then
 end
 if game.PlaceId == 3956818381 then
     NL()
+end
 end
 end
