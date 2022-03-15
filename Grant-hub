@@ -2,7 +2,9 @@ local keyNDS = loadstring(game:HttpGet("https://raw.githubusercontent.com/grantg
 local keyPL = loadstring(game:HttpGet("https://raw.githubusercontent.com/grantghk/loadded/main/keyPL"))()
 local keyTOH = loadstring(game:HttpGet("https://raw.githubusercontent.com/grantghk/loadded/main/keyTOH"))()
 local keyNL = loadstring(game:HttpGet("https://raw.githubusercontent.com/grantghk/loadded/main/keyNL"))()
+local keyv2 = loadstring(game:HttpGet("https://raw.githubusercontent.com/grantghk/loadded/main/keyv2"))()
 local Name = loadstring(game:HttpGet("https://raw.githubusercontent.com/grantghk/loadded/main/Name"))()
+local NameV2 = loadstring(game:HttpGet("https://raw.githubusercontent.com/grantghk/loadded/main/Name%20V2"))()
 _G.Key = getgenv().Key
 local Key = getgenv().Key
 local command = getgenv().Command
@@ -11,10 +13,13 @@ local keytype = getgenv().KeyType
 local newkey = getgenv().NewKey
 local suscessHWID = {}
 local suscessName = {}
+local suscess = {}
 local NDSkey = {}
 local PLkey = {}
 local TOHkey = {}
 local NLkey = {}
+local v2 = {}
+local name2 = {}
 for i, v in pairs(Name) do
     if v == game:GetService("Players").LocalPlayer.Name then
         table.insert(suscessName, true)
@@ -100,7 +105,33 @@ function NL()
             Text = "Login As:" ..game:GetService("Players").LocalPlayer.Name,
         })
 end
-
+function Manager()
+rconsolename("Grant Hub")
+rconsoleprint("Thank For Buying Grant Hub V.2")
+wait(2)
+rconsoleclose()
+local DiscordLib = loadstring(game:HttpGet"https://raw.githubusercontent.com/dawid-scripts/UI-Libs/main/discord%20lib.txt")()
+local win = DiscordLib:Window("Grant Hub-Premium Edition")
+local serv = win:Server("Script Manager", "")
+local main = serv:Channel("Main")
+local tablee = {"Tower Of Hell", "Ninja Legend", "Natural Disaster Survival", "Prison Life", "All-Game-Script"}
+main:Dropdown("Select Script", tablee, function(bool)
+    selecte = bool
+end)
+main:Button("Execute", function()
+    if selecte == "Tower Of Hell" then
+        TOH()
+    elseif selecte == "Ninja Legend" then
+        NL()
+    elseif selecte == "Natural Disaster Survival" then
+        NDS()
+    elseif selecte == "Prison Life" then
+        PL()
+    else
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/grantghk/loadded/main/all-game"))()
+    end
+end)
+end
 if hwid == game:GetService("RbxAnalyticsService"):GetClientId() then
     table.insert(suscessHWID, true)
 end
@@ -294,4 +325,42 @@ end
 end
 if command == "ResetHWID" then
 writefile("Grant Hub\\HWIDS.txt", game:GetService("RbxAnalyticsService"):GetClientId())
+end
+for i, v in pairs(keyv2) do
+    if v == _G.Key then
+        table.insert(v2, true)
+    end
+end
+for i, v in pairs(name2) do
+    if v == game:GetService("Players").LocalPlayer.Name then
+        table.insert(suscess, true)
+    end
+end
+if getgenv().FirstRun == true then
+if suscess[1] == true then
+makefolder("Grant Hub")
+makefolder("Grant Hub\\Key")
+makefolder("Grant Hub\\System")
+makefolder("Grant Hub\\System\\Backup")
+makefolder("Grant Hub\\System\\Key")
+writefile("Grant Hub\\HWIDS.txt", game:GetService("RbxAnalyticsService"):GetClientId())
+writefile("Grant Hub\\Running.txt", "false")
+end
+end
+if v2[1] == true do
+if command == "Manual" then
+    Manager()
+else
+if game.PlaceId == 155615604 then
+    PL()
+end
+if game.PlaceId == 189707 then
+    NDS()
+end
+if game.PlaceId == 1962086868 then
+    TOH()
+end
+if game.PlaceId == 3956818381 then
+    NL()
+end
 end
