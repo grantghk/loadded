@@ -4278,9 +4278,6 @@ ShopTab:Label("DevilFruit",true)
 ShopTab:Button("Buy Random Devil Fruit",function()
     game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("Cousin","Buy")
 end)
-ShopTab:Toggle("Auto Random Devil Fruit",false,function(v)
-    DevilAutoBuy = v
-end)
 spawn(function()
     while wait() do 
         if DevilAutoBuy then
@@ -4529,17 +4526,12 @@ for i,v in next,Remote_GetFruits do
         table.insert(ShopDevilSell,v.Name)
     end
 end
-Devil_Fruit_Sniper_Tab:Label("Devil Fruit Sniper")
 SelectDevil = ""
 Devil_Fruit_Sniper_Tab:Dropdown("Select Devil Fruit Sniper",Table_DevilFruitSniper,0,function(a)
     SelectDevil = a
 end)
 Devil_Fruit_Sniper_Tab:Toggle("Buy Devil Fruit Sinper",false,function(value)
-    if SelectDevil == "" and value then
-        DiscordLib:Notification("Grant Hub","Select Devil Fruit", "OK")
-    else
         BuyFruitSinper = value
-    end	
 end)
 Devil_Fruit_Sniper_Tab:Toggle("Bring Devil Fruit",bringdevilfruit,function(value)
     TeleportDF = value
