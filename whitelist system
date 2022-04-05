@@ -1,0 +1,65 @@
+local licenselist = loadstring(game:HttpGet("https://raw.githubusercontent.com/grantghk/database/main/licensekey"))()
+for i, v in pairs(licenselist) do
+if licenseKey == v and DiscordId == DiscordId then
+run()
+end
+end
+function run()
+function load(link)
+print(Hubname.." no.1")
+rconsoleprint("@@"..consolecolor.."@@")
+rconsolename()
+rconsoleprint()
+wait(2)
+rconsoleclose()
+        StarterGui:SetCore("SendNotification", {
+            Title = Hubname;
+            Text = "loading...",
+        })
+        wait(5.5)
+        loadstring(game:HttpGet(link))()
+end
+local susname = {}
+for i, v in pairs(name) do
+    if getgenv().Key == v then
+        table.insert(susname, true)
+    end
+end
+local folder = isfolder(Hubname)
+local hwid = readfile(Hubname.."\\HWID.txt")
+local key = nil
+if keymode == "link" then
+key = loadstring(game:HttpGet(keylink))()
+elseif keymode == "list"
+key = keylist
+end
+local loading = {}
+for i, v in pairs(key) do
+    if getgenv().Key == v then
+        table.insert(loading, true)
+    end
+end
+function cq()
+if loading[1] == true then
+if hwid == game:GetService("RbxAnalyticsService"):GetClientId() then
+load(script)
+else
+kick(invaidhwidtext)
+end
+else
+kick(invaidkeytext)
+end
+end
+if folder then
+cq()
+else
+if susname[1] == true then
+    if folder then
+        print("have folder")
+    else
+        makefolder(Hubname)
+        makefile(Hubname.."\\HWID.txt", game:GetService("RbxAnalyticsService"):GetClientId())
+    end
+end
+end
+end
