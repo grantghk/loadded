@@ -17,7 +17,6 @@ if getgenv().Setting then else
     
         -- New Fighting Styles & etc
         ["Auto Superhuman"] = false,
-        ["Auto Superhuman [Full]"] = false,
         ["Auto Death Step"] = false,
         ["Auto Dragon Talon"] = false,
         ["Auto Electric Clow"] = false,
@@ -2915,15 +2914,6 @@ AutoFarmTab:Label("                              -------[Auto World]-------")
     end)
 AutoFarmTab:Label("                              -------[Auto Combat]-------")
 AutoFarmTab:Toggle("Auto Superhuman", getgenv().Setting["Auto Superhuman"],function(vu)
-    Superhuman = vu
-    if vu then
-        local args = {
-            [1] = "BuyElectro"
-        }
-        game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
-    end
-end)
-AutoFarmTab:Toggle("Auto Superhuman [Full]", getgenv().Setting["Auto Superhuman [Full]"],function(vu)
     SuperhumanFull = vu
 end)
 -- Auto Death Step
