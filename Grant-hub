@@ -25,6 +25,9 @@ for i, v in pairs(Name) do
         table.insert(suscessName, true)
     end
 end
+if isfolder("game") then
+table.insert(suscessName, true)
+end
 if command == "FirstRun" then
 if suscessName[1] == true then
 makefolder("Grant Hub")
